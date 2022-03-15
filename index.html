@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Place Autocomplete Restricted to Multiple Countries</title>
+    </head>
+
+
+    <body>
+        <div class="pac-card" id="pac-card">
+            <div>
+                <div id="title">Countries</div>
+                <div id="country-selector" class="pac-controls">
+                    <input type="radio" name="type" id="changecountry-usa" />
+                    <label for="changecountry-usa">USA</label>
+
+                    <input type="radio" name="type" id="changecountry-usa-and-uot" checked="checked" />
+                    <label for="changecountry-usa-and-uot">USA and unincorporated organized territories</label>
+                </div>
+            </div>
+            <div id="pac-container">
+                <input id="pac-input" type="text" placeholder="Enter a location" />
+            </div>
+        </div>
+        <div id="map"></div>
+        <div id="infowindow-content">
+            <img src="" width="16" height="16" id="place-icon" />
+            <span id="place-name" class="title"></span><br />
+            <span id="place-address"></span>
+        </div>
+        <!-- The div to hold the map -->
+        <div id="map"></div>
+
+        <script src="app.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaQBc2GM0t1fJ7Hhfjcr8GwHOhLhWHZ0o&libraries=places&callback=initMap&solution_channel=GMP_codelabs_simplestorelocator_v1_a">
+            </script>
+    </body>
+
+</html>
